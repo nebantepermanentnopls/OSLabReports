@@ -74,7 +74,9 @@
 
 ![suzen21](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen21.jpg)
 
-Используя утилиту rm с выражениями для удаления файлов.
+Используя утилиту rm с выражениями для удаления файлов. Утилита grep с ключом -o  используется для поиска подстроки в выводe ls(там много файлов, сложо искать), которая удовлетворяет регулярному выражению '[0-9a-zA-Z]\{28\}':
+ *[0-9a-zA-Z]- подстрока состоит из только из букв и цифпр;
+ *\{28\}- длинна подстроки равна 28(бекслэши используются для экранировки).
 
 ## Suzen22
 
@@ -82,7 +84,7 @@
 
 Пишем скрип для создания файлов,
 “for i in `seq 1 999`” - конструкция, которая нужна для построения цикла от 1 до 999.
-Файлы создаются с помощью утилиты touch.
+Файлы создаются с помощью утилиты touch. Комбинация ls и grep используется для быстрого, не ручного поиска.
 
 ## Suzen23
 
@@ -107,15 +109,19 @@
 
 ## Suzen26
 
-![suzen26](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen26.jpg)
+![suzen26.1](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen26.1.jpg)
 
-Открываем файл через less, видим FIRST_FLAG_PART, понимаем что нужно искать и пользуемся поиском(/…)
+![suzen26.2](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen26.2.jpg)
+
+![suzen26.3](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen26.3.jpg)
+
+Открываем файл через less, видим FIRST_FLAG_PART и пользуемся поиском(/…).
 
 ## Suzen27
 
 ![suzen27](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen27.jpg)
 
-Запускаем утилиту tail с флагом -f для построчного чтения файла.
+Запускаем утилиту tail с флагом -f для построчного чтения файла. Направляем вывод в grep для вывода ТОЛЬКО ключа.
 
 ## Suzen28
 
