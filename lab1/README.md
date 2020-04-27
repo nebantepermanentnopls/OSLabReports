@@ -1,5 +1,9 @@
 # Отчет по лабораторной работе №1
 
+В отчете предоставлены решения заданий из [SuzenEscape](https://github.com/bykvaadm/SuzenEscape).
+
+В папке [screepts](https://github.com/nebantepermanentnopls/OSLabReports/tree/master/lab1/scripts) содержатся скрипты для решения заданий.
+
 ## Suzen1
 
 ![suzen1](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab1/screenshots/suzen1.jpg)
