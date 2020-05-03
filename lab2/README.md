@@ -26,34 +26,44 @@
 ## Задание 1
 При установке ОС настроили RAID и логические тома(как в [пояснении](https://github.com/nebantepermanentnopls/OS/tree/master/admin/lab2)),
 получили следующую картину:
+
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image1.jpg)
 
 Копируем содержимое раздела /boot с диска sda на sdb и смотрим информацию о дисках с помощью ```fdisk -l```
 (флаг ```-l``` используется для просмотров всех доступных разделов)
+
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image2.jpg)
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image3.jpg)
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image4.jpg)
+
 Утилита вывела информацию о дисках(sda, sdb), разделах(sda1, sdb1 и т.д.), которые содержатся на этих дисках,
 RAID-массиве(md0) и логических томах(root, var, log), которые мы создали.
 
 Используем команду ```lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT```, получив следующий результат:
+
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image5.jpg)
+
 Команда вывела дерево дисковых пространств и инфрмацию(размер, тип файловой системы, тип пространства, 
 точка монтирования)  о каждой части дерева.
 
-Устанавливаем grub на диск sdb командой ```grub-install /dev/sdb:
+Устанавливаем grub на диск sdb командой ```grub-install /dev/sdb```:
+
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image6.jpg)
 
 Просматриваем информацию о физических томах(команда ```pvs```), логичкских группах(```vgs```) и логических
 томах(команда ```lvs```), получаем:
+
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image7.jpg)
+
 Команда ```pvs``` вывела все содержащиеся в системе физические тома(у нас это md0), их размер, атрибуты и
 логическую группу, которую содержит физический том.
 Команда ```vgs``` вывела информацию(кол-во логических томов, размер, атрибуты) о единственной логической группе system.
 Команда ```lvs``` показывает группу, атрибуты и размер каждого логического тома в системе.
 
 Чтобы узнать информацию о RAID открываем для чтения файл /proc/mdstat:
+
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image8.jpg)
+
 Данная команда показала активные диски в нашем RAID-массиве.
 
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image9.jpg)
