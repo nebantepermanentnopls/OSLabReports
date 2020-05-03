@@ -31,7 +31,7 @@
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image1.jpg)
 
 Копируем содержимое раздела /boot с диска sda на sdb и смотрим информацию о дисках с помощью ```fdisk -l```
-(флаг ```-l``` используется для просмотров всех доступных разделов)
+(флаг ```-l``` используется для просмотров всех доступных разделов).
 
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image2.jpg)
 ![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab2/images/image3.jpg)
