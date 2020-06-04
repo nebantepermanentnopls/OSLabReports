@@ -1,1 +1,1 @@
-![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab5/images/image24.jpg)
+![](https://github.com/nebantepermanentnopls/OSLabReports/blob/master/lab5/images/img.jpg)
